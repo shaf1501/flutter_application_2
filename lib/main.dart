@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
+/*
+overflow handling:
+1. Single Child Scroll View
+2. Expanded
+3. 
+*/
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,37 +20,28 @@ class MyApp extends StatelessWidget {
       title: "Basic UI - Flutter",
       home: Scaffold(
           appBar: AppBar(
-            title: Text("TheFirstApp"),
+            title: Text("MyFirstApp"),
             centerTitle: true,
-            backgroundColor: const Color.fromARGB(255, 25, 141, 219),
+            backgroundColor: const Color.fromARGB(255, 219, 25, 177),
             elevation: 10.5,
           ),
-          body: Container(
-            height: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(Icons.star_border,
-                size: 50,
-                color: const Color.fromARGB(255, 255, 1, 1),
-                ),
-                 Icon(Icons.star_border,
-                size: 50,
-                color: const Color.fromARGB(255, 16, 70, 246), 
-                ),  
-                Icon(Icons.star_border,
-                size: 50,
-                color: const Color.fromARGB(255, 33, 203, 138), 
-                ), 
-                 Icon(Icons.star_border,
-                size: 50,
-                color: const Color.fromARGB(255, 183, 19, 242),  
-                ),        
-              ],
+          body: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Container(
+              height: double.infinity,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: List.generate(100, 
+                (index) => Icon(Icons.star_border,
+                  size: index.toDouble(),
+                  color: const Color.fromARGB(255, 1, 120, 255),
+                  ),
+              ),
             ),
           )
           ),
+      ),
     );
   }
 }//task1
