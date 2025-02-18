@@ -16,36 +16,33 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: Text("TheFirstApp"),
             centerTitle: true,
-            backgroundColor: const Color.fromARGB(255, 0, 6, 10),
+            backgroundColor: const Color.fromARGB(255, 25, 141, 219),
             elevation: 10.5,
           ),
-          body: Row(
-            children: [
-              Icon(Icons.star,
-              size: 50,
-              color: Colors.black,
-      
-              ),
-               Icon(Icons.star,
-              size: 50,
-              color: Colors.black,
-      
-              ),
-               Icon(Icons.star,
-              size: 50,
-              color: Colors.black,
-              ),
-               Icon(Icons.star,
-              size: 50,
-              color: Colors.black,
-      
-              ),
-               Icon(Icons.star_outline,
-              size: 50,
-              color: Colors.black,
-      
-              ),           
-            ],
+          body: Container(
+            height: double.infinity,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(Icons.star_border,
+                size: 50,
+                color: const Color.fromARGB(255, 255, 1, 1),
+                ),
+                 Icon(Icons.star_border,
+                size: 50,
+                color: const Color.fromARGB(255, 16, 70, 246), 
+                ),  
+                Icon(Icons.star_border,
+                size: 50,
+                color: const Color.fromARGB(255, 33, 203, 138), 
+                ), 
+                 Icon(Icons.star_border,
+                size: 50,
+                color: const Color.fromARGB(255, 183, 19, 242),  
+                ),        
+              ],
+            ),
           )
           ),
     );
