@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
               color: const Color.fromARGB(255, 59, 255, 144),
               fontSize: 80,
             ),),
-           
+            
           ],
         )
         ,
