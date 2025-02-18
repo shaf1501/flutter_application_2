@@ -25,23 +25,69 @@ class MyApp extends StatelessWidget {
             backgroundColor: const Color.fromARGB(255, 219, 25, 177),
             elevation: 10.5,
           ),
-          body: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Container(
-              height: double.infinity,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: List.generate(100, 
-                (index) => Icon(Icons.star_border,
-                  size: index.toDouble(),
-                  color: const Color.fromARGB(255, 1, 120, 255),
-                  ),
+          body: Container(
+          height: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Icon(
+                Icons.star_border,
+                size: 50,
+                color: const Color.fromARGB(255, 167, 81, 81),
               ),
-            ),
-          )
+              Icon(
+                Icons.abc_sharp,
+                size: 50,
+                color: const Color.fromARGB(255, 29, 29, 186),
+              ),
+              Icon(
+                Icons.star_border,
+                size: 50,
+                color: const Color.fromARGB(255, 115, 198, 130),
+              ),
+              Icon(
+                Icons.abc_sharp,
+                size: 50,
+                color: const Color.fromARGB(255, 224, 244, 7),
+              ),
+              Icon(
+                Icons.star_border,
+                size: 50,
+                color: const Color.fromARGB(255, 228, 109, 177),
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.abc_sharp,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star_border,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.abc_sharp,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star_border,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.abc_sharp,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
+            ],
           ),
+        ),
       ),
     );
   }
-}//task1
+}
