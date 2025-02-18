@@ -11,30 +11,43 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Basic Flutter UI- Part:2",
+      title: "Basic UI - Flutter",
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Basic Flutter UI -02"),
-          backgroundColor: Colors.blue,
-          centerTitle: true,
-        ),
-        body: Row(
-          children: [
-            Text("Hi,",
-            style: TextStyle(
-              color: Colors.yellow,
-              fontSize: 50,
-            ),),
-            Text("This is",
-            style: TextStyle(
-              color: const Color.fromARGB(255, 59, 255, 144),
-              fontSize: 80,
-            ),),
-            
-          ],
-        )
-        ,
-      )
+          appBar: AppBar(
+            title: Text("TheFirstApp"),
+            centerTitle: true,
+            backgroundColor: const Color.fromARGB(255, 0, 6, 10),
+            elevation: 10.5,
+          ),
+          body: Row(
+            children: [
+              Icon(Icons.star,
+              size: 50,
+              color: Colors.black,
+      
+              ),
+               Icon(Icons.star,
+              size: 50,
+              color: Colors.black,
+      
+              ),
+               Icon(Icons.star,
+              size: 50,
+              color: Colors.black,
+              ),
+               Icon(Icons.star,
+              size: 50,
+              color: Colors.black,
+      
+              ),
+               Icon(Icons.star_outline,
+              size: 50,
+              color: Colors.black,
+      
+              ),           
+            ],
+          )
+          ),
     );
   }
 }
